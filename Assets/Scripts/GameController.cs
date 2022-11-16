@@ -1,9 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
     public static GameController Instance;
+
+    [SerializeField] private GameObject UserNameInput;
+
+    [SerializeField] private UserData userData;
 
     public static int Points { get; private set; }
 
@@ -40,13 +45,19 @@ public class GameController : MonoBehaviour
     public void Win()
     {
         GameStarted = false;
-        gameResult.text = "You Win!";
+        UserNameInput.SetActive(true);
     }
 
     public void Lose()
     {
         GameStarted = false;
-        gameResult.text = "You Lose!";
+        UserNameInput.SetActive(true);
+    }
+
+    public void AddUserLeaderBoard(string str)
+    {
+        SceneManager.LoadScene(0);
+        userData.
     }
 
     public void AddPoints(int points)

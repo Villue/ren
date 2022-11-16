@@ -10,7 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75a4d56ee9ee6e842bd04cb6179a513f, type: 3}
-  m_Name: UserData
+  m_Name: Users
   m_EditorClassIdentifier: 
-  Username: 
-  Score: 0
