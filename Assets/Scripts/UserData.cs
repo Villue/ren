@@ -1,11 +1,25 @@
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "user", menuName = "Data/UserData", order = 1)]
 public class UserData : ScriptableObject
 {
-    public List<User> users;
+    [SerializeField] private List<User> users = new();
+
+    public List<User> Users
+    {
+        set { users = value; }
+
+        get
+        {
+            return users;
+        }
+    }
+
 }
+
+
 
 public class User
 {

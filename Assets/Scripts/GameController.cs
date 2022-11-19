@@ -19,6 +19,9 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI pointsText;
 
+
+    [SerializeField] private TMPro.TMP_InputField _InputField;
+
     private void Awake()
     {
         if (Instance == null)
@@ -54,10 +57,10 @@ public class GameController : MonoBehaviour
         UserNameInput.SetActive(true);
     }
 
-    public void AddUserLeaderBoard(string str)
+    public void AddUserLeaderBoard()
     {
         SceneManager.LoadScene(0);
-        userData.
+        userData.Users.Add(new User(_InputField.text, Points));
     }
 
     public void AddPoints(int points)
